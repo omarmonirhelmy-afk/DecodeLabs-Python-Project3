@@ -1,0 +1,18 @@
+Project 3: Random Password Generator
+
+This is my third project for the DecodeLabs internship. It focuses on library integration, secure data generation, and efficient string manipulation in Python.
+
+How the Code Works (Step by Step):
+
+1.Input and Validation: The program prompts the user for a password length. It encapsulates the input within a try-except block to catch ValueError if a non-integer is entered.
+
+2.Character Pooling: Instead of manually typing arrays, it utilizes the standard string module (string.ascii_letters, string.digits, and string.punctuation) to assemble a robust character pool.
+
+3.Cryptographically Secure Randomness: To comply with modern security standards, it uses secrets.choice() from the built-in secrets module instead of the deterministic random module, ensuring unpredictable outputs.
+
+4.Efficient String Construction: Characters are appended to a temporary list inside a loop. Finally, it uses the "".join() method to allocate memory exactly once, achieving linear time complexity $O(N)$ instead of creating heavy memory overhead.
+
+Project Deliverables Met:
+Used standard library integration (`string` and `secrets`).
+Implemented type safety for inputs.
+Avoided memory traps by using `.join()`.
